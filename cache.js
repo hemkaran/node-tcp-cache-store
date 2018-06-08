@@ -1,15 +1,21 @@
+'use strict';
 let cache = {};
 
 module.exports = {
-    set (key, value) {
-        cache[name] = value;
+    set (key, value, ttl) {
+        cache[key] = value;
+        if(ttl && !isNaN(ttl)) {
+            setTimeout(function () {
+                delete cache[key];
+            }, ttl * 1000);
+        }
     },
 
     get (key) {
-        return cache[key];
+        return cache[key] || '';
     },
 
     getAll() {
-        return JSON.stringify(Object.keys(cache));
+        return Object.keys(cache);
     }
 };
