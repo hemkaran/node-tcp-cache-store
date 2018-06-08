@@ -1,0 +1,8 @@
+{
+  "name": "tcp-cache",
+  "version": "1.0.0",
+  "description": "TCP server based cache",
+  "main": "index.js",
+  "author": "Hemkaran Raghav <hemkaran.raghav@wingify.com>",
+  "license": "MIT"
+}
